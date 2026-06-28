@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торт и Шоколад — Авторские торты на заказ в Москве</title>
+    <meta name="description" content="Эксклюзивные торты ручной работы из натуральных ингредиентов. Соберите свой идеальный торт в онлайн-конструкторе. Свадебные, детские и праздничные шедевры.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍰</span>
+                <span class="logo-text"><strong>Торт</strong> & Шоколад</span>
+            </a>
+            <nav class="nav" aria-label="Основная навигация">
+                <a href="#constructor">Конструктор тортов</a>
+                <a href="#gallery">Наши шедевры</a>
+                <a href="#philosophy">О нас</a>
+            </nav>
+            <a href="#constructor" class="cta-btn-header">Перейти к заказу</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-info">
+                    <span class="badge">Кондитерское искусство</span>
+                    <h1>Торты, которые <br>создают воспоминания</h1>
+                    <p class="hero-desc">Создаем эксклюзивные десерты ручной работы для ваших особенных моментов. Только натуральные фермерские ингредиенты, бельгийский шоколад и изысканный авторский декор.</p>
+                    
+                    <div class="features-mini">
+                        <div class="feat-mini-item">
+                            <span class="feat-icon">🍓</span>
+                            <span>Свежие ягоды и фрукты</span>
+                        </div>
+                        <div class="feat-mini-item">
+                            <span class="feat-icon">🥚</span>
+                            <span>Без искусственных добавок</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Cake Constructor -->
+                <div class="calc-card" id="constructor">
+                    <h2>Создайте свой идеальный торт</h2>
+                    
+                    <form class="calc-form" id="bakeryForm">
+                        <!-- Step 1: Base -->
+                        <div class="form-group">
+                            <label class="group-title">Шаг 1: Выберите основу</label>
+                            <div class="selector-grid">
+                                <label class="select-card">
+                                    <input type="radio" name="base" value="biscuit" data-price="2200" checked>
+                                    <span class="card-box">
+                                        <span class="card-name">Бисквитная</span>
+                                        <span class="card-desc">Классическая, воздушная</span>
+                                    </span>
+                                </label>
+                                <label class="select-card">
+                                    <input type="radio" name="base" value="mousse" data-price="2600">
+                                    <span class="card-box">
+                                        <span class="card-name">Муссовая</span>
+                                        <span class="card-desc">Нежная, европейская</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Filling -->
+                        <div class="form-group">
+                            <label class="group-title">Шаг 2: Вкус и начинка</label>
+                            <select id="fillingSelect" name="filling" class="select-input">
+                                <option value="strawberry" data-extra="0">Клубничное конфи с базиликом</option>
+                                <option value="chocolate" data-extra="200">Шоколадный ганаш с вишней</option>
+                                <option value="caramel" data-extra="150">Соленая карамель с арахисом</option>
+                                <option value="pistachio" data-extra="400">Фисташка-малина премиум</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 3: Decor -->
+                        <div class="form-group">
+                            <label class="group-title">Шаг 3: Декор и оформление</label>
+                            <div class="decor-grid">
+                                <label class="decor-item">
+                                    <input type="checkbox" name="decor" value="berries" data-price="800" checked>
+                                    <span class="decor-box">
+                                        <span class="decor-icon">🍓</span>
+                                        <span class="decor-name">Свежие ягоды</span>
+                                        <span class="decor-price">+800 ₽</span>
+                                    </span>
+                                </label>
+                                <label class="decor-item">
+                                    <input type="checkbox" name="decor" value="flowers" data-price="1200">
+                                    <span class="decor-box">
+                                        <span class="decor-icon">🌸</span>
+                                        <span class="decor-name">Живые цветы</span>
+                                        <span class="decor-price">+1 200 ₽</span>
+                                    </span>
+                                </label>
+                                <label class="decor-item">
+                                    <input type="checkbox" name="decor" value="gold" data-price="1000">
+                                    <span class="decor-box">
+                                        <span class="decor-icon">✨</span>
+                                        <span class="decor-name">Сусальное золото</span>
+                                        <span class="decor-price">+1 000 ₽</span>
+                                    </span>
+                                </label>
+                                <label class="decor-item">
+                                    <input type="checkbox" name="decor" value="paint" data-price="1500">
+                                    <span class="decor-box">
+                                        <span class="decor-icon">🎨</span>
+                                        <span class="decor-name">Художественная роспись</span>
+                                        <span class="decor-price">+1 500 ₽</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Weight Slider -->
+                        <div class="form-group">
+                            <div class="slider-header">
+                                <label for="weightRange" class="group-title">Вес торта</label>
+                                <span class="slider-value"><strong id="weightVal">2.0</strong> кг</span>
+                            </div>
+                            <input type="range" id="weightRange" name="weight" min="1.5" max="8.0" step="0.5" value="2.0" class="range-slider">
+                            <div class="servings-note">Приблизительно на <strong id="servingsVal">13</strong> гостей (по 150г на порцию)</div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="price-display">
+                            <span class="price-label">Итоговая стоимость:</span>
+                            <span class="price-amount"><span id="totalPrice">5 200</span> ₽</span>
+                        </div>
+
+                        <!-- Contact Details -->
+                        <div class="contact-inputs">
+                            <div class="input-row">
+                                <input type="text" name="name" placeholder="Ваше имя" required class="text-input">
+                                <input type="text" name="contact" placeholder="Телефон или Telegram" required class="text-input">
+                            </div>
+                            <div class="input-row-single">
+                                <input type="text" name="delivery" placeholder="Дата доставки / Самовывоза" required class="text-input" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                            </div>
+                            <textarea name="wishes" placeholder="Ваши особые пожелания (надпись на торте, аллергены, изменения в декоре)" class="textarea-input"></textarea>
+                        </div>
+
+                        <!-- Agreement Checkbox -->
+                        <div class="form-agreement">
+                            <input type="checkbox" id="agree" name="agreement" required>
+                            <label for="agree">
+                                Я даю <a href="privacy.html" target="_blank">согласие на обработку персональных данных</a> на условиях политики конфиденциальности.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Заказать шедевр</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Свадебные и праздничные коллекции</h2>
+                    <p>Каждый торт уникален и разрабатывается под концепцию вашего праздника.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <div class="card-img-placeholder" style="background-color: #eae3db; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👰‍♀️</div>
+                        <h3>Свадебные торты</h3>
+                        <p>Многоярусные шедевры с каскадами цветов, стильной геометрией и идеальным покрытием.</p>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="card-img-placeholder" style="background-color: #eae3db; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎈</div>
+                        <h3>Детские торты</h3>
+                        <p>Яркие, запоминающиеся торты с любимыми героями из мастики и шоколадного велюра.</p>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="card-img-placeholder" style="background-color: #eae3db; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">✨</div>
+                        <h3>Юбилейные и праздничные</h3>
+                        <p>Стильные торты в стиле минимализм с брызгами золота, свежими ягодами или велюром.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-icon">🍰</span>
+                <span><strong>Торт</strong> & Шоколад</span>
+            </div>
+            <p class="footer-copy">&copy; 2026 Торт & Шоколад. Все права защищены. Разработано в рамках портфолио DenVolodins.</p>
+            <a href="privacy.html" class="footer-link" target="_blank">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

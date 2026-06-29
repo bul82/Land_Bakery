@@ -174,6 +174,27 @@ h1 {
     font-size: 1.5rem;
 }
 
+.hero-photo {
+    margin-top: 2rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.16);
+    box-shadow: var(--shadow);
+    background: var(--card-bg);
+}
+
+.hero-photo img,
+.gallery-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-photo img {
+    aspect-ratio: 16 / 9;
+}
+
 /* Calculator Card */
 .calc-card {
     background: var(--card-bg);
@@ -371,6 +392,12 @@ h1 {
 
 .servings-note strong {
     color: var(--text-main);
+}
+
+.gallery-img {
+    height: 300px;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
 }
 
 /* Price Display */

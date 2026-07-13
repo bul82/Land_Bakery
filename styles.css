@@ -15,6 +15,8 @@
     --radius-md: 12px;
     --shadow: 0 16px 36px -12px rgba(62, 39, 35, 0.06);
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    --font-display: Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -24,11 +26,12 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     background-color: var(--bg-body);
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
 }
 
 .container {
@@ -55,6 +58,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    min-width: 0;
 }
 
 .logo {
@@ -63,7 +67,7 @@ body {
     gap: 0.5rem;
     text-decoration: none;
     color: var(--text-main);
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 700;
 }
@@ -121,10 +125,12 @@ body {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 4rem;
     align-items: start;
+    min-width: 0;
 }
 
 .hero-info {
     padding-top: 3rem;
+    min-width: 0;
 }
 
 .badge {
@@ -142,7 +148,7 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 3.25rem;
     font-weight: 700;
     line-height: 1.15;
@@ -181,18 +187,26 @@ h1 {
     border: 1px solid rgba(212, 175, 55, 0.16);
     box-shadow: var(--shadow);
     background: var(--card-bg);
+    max-width: 100%;
+    min-width: 0;
 }
 
 .hero-photo img,
 .gallery-img {
     display: block;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     object-fit: cover;
     object-position: center;
 }
 
 .hero-photo img {
     aspect-ratio: 16 / 9;
+}
+
+.mobile-only-break {
+    display: none;
 }
 
 /* Calculator Card */
@@ -202,10 +216,11 @@ h1 {
     border-radius: var(--radius-lg);
     padding: 2.5rem;
     box-shadow: var(--shadow);
+    min-width: 0;
 }
 
 .calc-card h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -272,6 +287,7 @@ h1 {
 /* Select Input */
 .select-input {
     width: 100%;
+    min-width: 0;
     padding: 0.9rem;
     border-radius: var(--radius-md);
     border: 1px solid rgba(62, 39, 35, 0.08);
@@ -422,7 +438,7 @@ h1 {
     font-size: 1.85rem;
     font-weight: 700;
     color: var(--text-main);
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
 }
 
 /* Contact Details */
@@ -443,6 +459,7 @@ h1 {
 
 .text-input, .textarea-input {
     width: 100%;
+    min-width: 0;
     padding: 0.9rem;
     border-radius: var(--radius-md);
     border: 1px solid rgba(62, 39, 35, 0.08);
@@ -490,6 +507,7 @@ h1 {
 /* Submit Button */
 .submit-btn {
     width: 100%;
+    min-width: 0;
     background: var(--text-main);
     color: white;
     border: none;
@@ -521,7 +539,7 @@ h1 {
 }
 
 .section-head h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
@@ -535,18 +553,72 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    min-width: 0;
 }
 
 .gallery-card {
     text-align: center;
+    min-width: 0;
 }
 
 .gallery-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 100px 0;
+    background: var(--bg-body);
+}
+
+.philosophy-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+    align-items: start;
+    min-width: 0;
+}
+
+.philosophy-copy h2 {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+.philosophy-copy p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.philosophy-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.philosophy-list div {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.philosophy-list strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+}
+
+.philosophy-list span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
 }
 
 .gallery-card p {
@@ -574,7 +646,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 1.25rem;
 }
 
@@ -616,17 +688,74 @@ h1 {
         max-width: 500px;
         margin: 0 auto;
     }
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .header {
+        height: 68px;
+    }
+    .logo {
+        min-width: 0;
+        font-size: 1.08rem;
+        white-space: nowrap;
+    }
+    .logo-icon {
+        font-size: 1.35rem;
+    }
+    .cta-btn-header {
+        display: none;
+    }
+    .hero-section {
+        padding-top: 115px;
+        padding-bottom: 56px;
+    }
+    .mobile-only-break {
+        display: inline;
+    }
     h1 {
-        font-size: 2.35rem;
+        font-size: 1.62rem;
+        max-width: 21rem;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: break-word;
+    }
+    .hero-desc {
+        max-width: 18.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.9rem;
+    }
+    .features-mini {
+        flex-direction: column;
+        gap: 0.9rem;
+        align-items: center;
     }
     .calc-card {
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
+    }
+    .calc-card h2,
+    .section-head h2,
+    .philosophy-copy h2 {
+        font-size: 1.48rem;
+        line-height: 1.25;
+    }
+    .selector-grid {
+        grid-template-columns: 1fr;
     }
     .decor-grid {
         grid-template-columns: 1fr;
+    }
+    .price-display {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
     }
     .input-row {
         grid-template-columns: 1fr;

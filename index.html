@@ -6,11 +6,6 @@
     <title>Торт и Шоколад — Авторские торты на заказ в Москве</title>
     <meta name="description" content="Торты ручной работы под событие, вкус и формат доставки. Соберите торт в онлайн-конструкторе: начинка, декор, вес и дата.">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,7 +20,7 @@
             <nav class="nav" aria-label="Основная навигация">
                 <a href="#constructor">Конструктор тортов</a>
                 <a href="#gallery">Наши шедевры</a>
-                <a href="#philosophy">О нас</a>
+                <a href="#philosophy">О мастерской</a>
             </nav>
             <a href="#constructor" class="cta-btn-header">Перейти к заказу</a>
         </div>
@@ -37,7 +32,7 @@
             <div class="container hero-container">
                 <div class="hero-info">
                     <span class="badge">Кондитерское искусство</span>
-                    <h1>Торты, которые <br>создают воспоминания</h1>
+                    <h1>Торты, которые <br>создают <br class="mobile-only-break">воспоминания</h1>
                     <p class="hero-desc">Создаем эксклюзивные десерты ручной работы для ваших особенных моментов. Только натуральные фермерские ингредиенты, бельгийский шоколад и изысканный авторский декор.</p>
                     
                     <div class="features-mini">
@@ -57,7 +52,7 @@
 
                 <!-- Interactive Cake Constructor -->
                 <div class="calc-card" id="constructor">
-                    <h2>Соберите торт под событие</h2>
+                    <h2>Соберите торт под <br class="mobile-only-break">событие</h2>
                     
                     <form class="calc-form" id="bakeryForm">
                         <!-- Step 1: Base -->
@@ -195,6 +190,31 @@
                         <img class="gallery-img" src="assets/images/bakery-premium-hero.jpg" alt="Кондитерская витрина с тортом и натуральными ингредиентами" loading="lazy" decoding="async">
                         <h3>Юбилейные и праздничные</h3>
                         <p>Стильные торты в стиле минимализм с брызгами золота, свежими ягодами или велюром.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="philosophy-section" id="philosophy">
+            <div class="container philosophy-container">
+                <div class="philosophy-copy">
+                    <span class="badge">Подход</span>
+                    <h2>Десерт, который держит стиль события</h2>
+                    <p>Мы начинаем с повода, числа гостей и желаемого настроения, а затем подбираем основу, начинку и декор. Так торт выглядит уместно на столе, выдерживает доставку и остается понятным по вкусу.</p>
+                </div>
+                <div class="philosophy-list" aria-label="Принципы мастерской">
+                    <div>
+                        <strong>Состав</strong>
+                        <span>Натуральные продукты, сезонные ягоды, бельгийский шоколад и понятные начинки без лишних добавок.</span>
+                    </div>
+                    <div>
+                        <strong>Дизайн</strong>
+                        <span>Аккуратный декор под формат праздника: свадьба, детский день рождения, юбилей или камерный ужин.</span>
+                    </div>
+                    <div>
+                        <strong>Процесс</strong>
+                        <span>После заявки уточняем дату, вес, аллергены, доставку и финальную стоимость до внесения предоплаты.</span>
                     </div>
                 </div>
             </div>

@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return res.json();
         })
         .then(data => {
-            alert(`Спасибо за заказ, ${name}! Мы свяжемся с вами в ближайшее время для подтверждения деталей и оформления предоплаты.`);
+            alert(`Спасибо, ${name}! Заявка отправлена. Мы свяжемся с вами, чтобы уточнить детали заказа и условия оплаты.`);
             form.reset();
             // Reset state
             baseRadios[0].checked = true;

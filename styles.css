@@ -763,37 +763,17 @@ h1 {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 1.25rem;
     min-width: 0;
 }
 
 .gallery-card {
     text-align: center;
     min-width: 0;
-    position: relative;
-    cursor: pointer;
-}
-
-.gallery-card::after {
-    content: "посмотреть вкус";
-    position: absolute;
-    left: 50%;
-    top: 286px;
-    transform: translate(-50%, 8px);
-    padding: 0.25rem 0.55rem;
-    border-radius: 999px;
-    background: rgba(200, 69, 50, 0.92);
-    color: white;
-    font-size: 0.74rem;
-    font-weight: 700;
-    opacity: 0;
-    transition: var(--transition);
-    pointer-events: none;
-}
-
-.gallery-card:hover::after {
-    opacity: 1;
-    transform: translate(-50%, 0);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    background: var(--bg-body);
 }
 
 .gallery-card h3 {
@@ -802,6 +782,23 @@ h1 {
     font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
+}
+
+.gallery-triptych {
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    margin: -2rem auto 2rem;
+    box-shadow: var(--shadow);
+    background: var(--bg-body);
+}
+
+.gallery-triptych img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Philosophy Section */
@@ -1013,8 +1010,8 @@ h1 {
     .addons-grid {
         grid-template-columns: 1fr;
     }
-    .gallery-card::after {
-        display: none;
+    .gallery-triptych {
+        margin-top: -1rem;
     }
     .input-row {
         grid-template-columns: 1fr;

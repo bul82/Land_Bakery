@@ -3,6 +3,7 @@
    ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.querySelector(".preloader");
     const form = document.getElementById("bakeryForm");
     const weightRange = document.getElementById("weightRange");
     const weightVal = document.getElementById("weightVal");
@@ -15,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize calculator
     calculatePrice();
+
+    if (preloader) {
+        window.setTimeout(() => {
+            preloader.classList.add("is-hidden");
+        }, 1400);
+    }
 
     // Base Selection Handler
     baseRadios.forEach(radio => {

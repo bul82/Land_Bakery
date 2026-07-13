@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader-cake">
+            <span class="preloader-berry"></span>
+            <span class="preloader-cream"></span>
+        </div>
+        <span class="preloader-text">Готовим эскиз торта...</span>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
@@ -22,7 +30,7 @@
                 <a href="#gallery">Наши шедевры</a>
                 <a href="#philosophy">О мастерской</a>
             </nav>
-            <a href="#constructor" class="cta-btn-header">Перейти к заказу</a>
+            <a href="#constructor" class="cta-btn-header">Рассчитать заказ</a>
         </div>
     </header>
 
@@ -31,28 +39,33 @@
         <section class="hero-section">
             <div class="container hero-container">
                 <div class="hero-info">
-                    <span class="badge">Кондитерское искусство</span>
-                    <h1>Торты, которые <br>создают <br class="mobile-only-break">воспоминания</h1>
-                    <p class="hero-desc">Создаем эксклюзивные десерты ручной работы для ваших особенных моментов. Только натуральные фермерские ингредиенты, бельгийский шоколад и изысканный авторский декор.</p>
+                    <span class="badge">Авторская кондитерская</span>
+                    <h1>Торт под важный момент</h1>
+                    <p class="hero-desc">Создаём авторские торты, пирожные и сладкие наборы под событие, вкус и настроение.</p>
                     
                     <div class="features-mini">
                         <div class="feat-mini-item">
                             <span class="feat-icon">🍓</span>
-                            <span>Свежие ягоды и фрукты</span>
+                            <span>Финальный декор вручную</span>
                         </div>
                         <div class="feat-mini-item">
                             <span class="feat-icon">🥚</span>
-                            <span>Без искусственных добавок</span>
+                            <span>Торты, пирожные и candy-bar</span>
                         </div>
                     </div>
+                    <div class="hero-actions" aria-label="Основные действия">
+                        <a href="#gallery" class="hero-btn hero-btn-secondary">Выбрать торт</a>
+                        <a href="#constructor" class="hero-btn hero-btn-primary">Рассчитать заказ</a>
+                    </div>
                     <div class="hero-photo">
-                        <img src="assets/images/bakery-premium-hero.jpg" alt="Авторский торт, ягоды, шоколад и кондитерские инструменты" loading="eager" decoding="async">
+                        <img src="assets/images/bakery-premium-hero.jpg" alt="Кондитер добавляет ягоду на авторский кремовый торт" loading="eager" decoding="async">
                     </div>
                 </div>
 
                 <!-- Interactive Cake Constructor -->
                 <div class="calc-card" id="constructor">
                     <h2>Соберите торт под <br class="mobile-only-break">событие</h2>
+                    <p class="calc-intro">Сначала повод и вкус. Потом размер, начинка, декор и доставка.</p>
                     
                     <form class="calc-form" id="bakeryForm">
                         <!-- Step 1: Base -->
@@ -168,6 +181,26 @@
             </div>
         </section>
 
+        <!-- Add-ons Section -->
+        <section class="addons-section" id="addons">
+            <div class="container addons-container">
+                <div class="section-head addons-head">
+                    <span class="badge">Сладкий стол</span>
+                    <h2>Дополните торт десертами в одном стиле</h2>
+                    <p>К торту можно добавить пирожные, капкейки, макаронс или candy-bar — чтобы весь сладкий стол говорил одним стилем.</p>
+                </div>
+                <div class="addons-grid" aria-label="Дополнительные услуги">
+                    <div>Пирожные</div>
+                    <div>Капкейки</div>
+                    <div>Макаронс</div>
+                    <div>Кейк-попсы</div>
+                    <div>Выпечка</div>
+                    <div>Candy-bar</div>
+                    <div>Подарочные наборы</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery Section -->
         <section class="gallery-section" id="gallery">
             <div class="container">
@@ -179,12 +212,12 @@
                     <div class="gallery-card">
                         <img class="gallery-img" src="assets/images/bakery-premium-hero.jpg" alt="Премиальный авторский торт для события" loading="lazy" decoding="async">
                         <h3>Свадебные торты</h3>
-                        <p>Многоярусные торты с цветами, геометрией и аккуратным покрытием под стиль праздника.</p>
+                        <p>Многоярусные торты с цветами, ягодами и аккуратным покрытием под стиль праздника.</p>
                     </div>
                     <div class="gallery-card">
                         <img class="gallery-img" src="assets/images/bakery-premium-hero.jpg" alt="Шоколад, ягоды и декор для праздничного торта" loading="lazy" decoding="async">
                         <h3>Детские торты</h3>
-                        <p>Яркие, запоминающиеся торты с любимыми героями из мастики и шоколадного велюра.</p>
+                        <p>Десерты с понятным вкусом, мягкой палитрой и декором под возраст и тему праздника.</p>
                     </div>
                     <div class="gallery-card">
                         <img class="gallery-img" src="assets/images/bakery-premium-hero.jpg" alt="Кондитерская витрина с тортом и натуральными ингредиентами" loading="lazy" decoding="async">
